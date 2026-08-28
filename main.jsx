@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
+import { inject } from "@vercel/analytics";
 import DiagnosticFR from "./DiagnosticFR.jsx";
 import DiagnosticEN from "./DiagnosticEN.jsx";
+
+inject();
 
 const FONTS = `
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Epilogue:wght@400;500;600;700&display=swap');
