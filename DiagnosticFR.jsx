@@ -28,7 +28,7 @@ const SYSTEMS = [
   { key: "branding", label: "Personal Branding" },
   { key: "contenu", label: "Contenu" },
   { key: "acquisition", label: "Acquisition" },
-  { key: "lancement", label: "Lancement" },
+  { key: "nerveux", label: "Système nerveux" },
   { key: "vente", label: "Vente" },
 ];
 
@@ -125,33 +125,43 @@ const QUESTIONS = [
     ],
   },
   {
-    system: "lancement",
-    text: "As-tu un processus répétable pour lancer une offre, plutôt que de tout réinventer à chaque fois ?",
+    system: "nerveux",
+    text: "Quand ton business accélère (nouveaux clients, plus de demandes), comment réagit ton corps ?",
     options: [
-      "Chaque lancement part de zéro",
+      "Je passe en mode panique, je dors à peine",
+      "Je tiens le coup, mais je suis épuisée dès que ça retombe",
+      "La tension monte, mais je reste capable de la gérer",
+      "Je reste calme et ancrée, la croissance ne me déstabilise pas",
+    ],
+  },
+  {
+    system: "nerveux",
+    text: "As-tu des pratiques régulières pour réguler ton système nerveux (respiration, pause, ancrage) ?",
+    options: [
+      "Aucune, je n'y pense jamais",
+      "J'y pense, mais je ne les mets presque jamais en pratique",
+      "De temps en temps, sans vraie régularité",
+      "Oui, c'est intégré à mon rythme, presque quotidien",
+    ],
+  },
+  {
+    system: "nerveux",
+    text: "L'urgence (deadlines, imprévus) est-elle devenue ton mode de fonctionnement normal ?",
+    options: [
+      "Oui, je vis en permanence dans l'urgence",
+      "Souvent, l'urgence prend le dessus",
+      "Parfois, mais je retrouve un rythme stable après",
+      "Non, mon rythme reste stable même sous pression",
+    ],
+  },
+  {
+    system: "vente",
+    text: "As-tu un processus clair pour lancer et vendre une nouvelle offre, plutôt que de tout réinventer à chaque fois ?",
+    options: [
+      "Chaque lancement part de zéro, aucun processus",
       "Quelques éléments récurrents, sans vrai processus",
-      "Un processus existe, mais très ajusté à chaque fois",
+      "Un processus existe, mais je l'ajuste beaucoup à chaque fois",
       "Un processus clair, que je réutilise à chaque lancement",
-    ],
-  },
-  {
-    system: "lancement",
-    text: "Tes lancements sont-ils planifiés à l'avance, avec une séquence définie dans le temps ?",
-    options: [
-      "Non, je lance quand je m'y sens prête, sans plan",
-      "Vaguement, sans vrai calendrier",
-      "Oui, avec une séquence approximative",
-      "Oui, planifiés et séquencés précisément",
-    ],
-  },
-  {
-    system: "lancement",
-    text: "Peux-tu estimer approximativement le résultat d'un lancement avant même de le faire ?",
-    options: [
-      "Aucune idée, chaque lancement est une surprise",
-      "Une vague fourchette, très incertaine",
-      "Une estimation assez fiable",
-      "Une estimation précise, basée sur mes données",
     ],
   },
   {
@@ -204,7 +214,7 @@ const QUESTIONS = [
 const OFFER_URLS = {
   systema: "https://leasola.thrivecart.com/systema/?ref=diagnostic",
   alma: "https://leasola.thrivecart.com/alma/?ref=diagnostic",
-  siesta: "https://leasola.thrivecart.com/la-siesta/?ref=diagnostic",
+  siesta: "https://leasola.thrivecart.com/lasiestaclub-fr/?ref=diagnostic",
   lia: "https://tally.so/r/kdQW1o?ref=diagnostic",
 };
 
@@ -235,9 +245,9 @@ const RECOMMENDATIONS = {
     name: "La Siesta",
     tag: "Le programme de 90 jours",
     whoFor:
-      "Pour celles qui ont déjà des bases en personal branding, contenu et acquisition, mais dont les lancements et le parcours de vente restent imprévisibles ou épuisants.",
+      "Pour celles qui ont déjà des bases en personal branding, contenu et acquisition, mais dont la vente et le système nerveux restent imprévisibles ou épuisants.",
     result:
-      "Tu sors avec tes systèmes posés et connectés entre eux — contenu, acquisition, lancement, vente — en 90 jours, accompagnée.",
+      "Tu sors avec tes systèmes posés et connectés entre eux — contenu, acquisition, vente, système nerveux — en 90 jours, accompagnée.",
     nextStep: "Découvre le programme et réserve un appel de clarté.",
     ctaLabel: "Découvrir La Siesta",
     url: OFFER_URLS.siesta,
@@ -312,7 +322,7 @@ export default function Diagnostic() {
             branding: scores.find((s) => s.key === "branding").score,
             contenu: scores.find((s) => s.key === "contenu").score,
             acquisition: scores.find((s) => s.key === "acquisition").score,
-            lancement: scores.find((s) => s.key === "lancement").score,
+            nerveux: scores.find((s) => s.key === "nerveux").score,
             vente: scores.find((s) => s.key === "vente").score,
           },
           overall,
@@ -406,7 +416,7 @@ export default function Diagnostic() {
               <span style={{ fontStyle: "italic", color: COLORS.burgundySoft }}>5 systèmes</span>
             </h1>
             <p style={{ fontSize: 16, lineHeight: 1.6, color: COLORS.burgundySoft, marginBottom: 32 }}>
-              Personal branding, contenu, acquisition, lancement, vente. Réponds à 16 questions pour
+              Personal branding, contenu, acquisition, vente, système nerveux. Réponds à 17 questions pour
               savoir lequel de tes systèmes freine aujourd'hui ta liberté — et quelle est ta prochaine
               étape pour que ton business tourne, même quand tu n'es pas derrière.
             </p>
