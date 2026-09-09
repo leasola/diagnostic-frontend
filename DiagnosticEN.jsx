@@ -28,7 +28,7 @@ const SYSTEMS = [
   { key: "branding", label: "Personal Branding" },
   { key: "content", label: "Content" },
   { key: "acquisition", label: "Acquisition" },
-  { key: "launch", label: "Launch" },
+  { key: "nervous", label: "Nervous System" },
   { key: "sales", label: "Sales" },
 ];
 
@@ -125,33 +125,43 @@ const QUESTIONS = [
     ],
   },
   {
-    system: "launch",
-    text: "Do you have a repeatable process for launching an offer, rather than reinventing everything each time?",
+    system: "nervous",
+    text: "When your business speeds up (new clients, more demand), how does your body react?",
     options: [
-      "Every launch starts from scratch",
+      "I go into panic mode, I barely sleep",
+      "I hold on, but I'm drained the moment things settle",
+      "The tension rises, but I can still manage it",
+      "I stay calm and grounded, growth doesn't destabilize me",
+    ],
+  },
+  {
+    system: "nervous",
+    text: "Do you have regular practices to regulate your nervous system (breathwork, pausing, grounding)?",
+    options: [
+      "None, I never even think about it",
+      "I think about it, but rarely put it into practice",
+      "Every now and then, without real consistency",
+      "Yes, it's part of my rhythm, almost daily",
+    ],
+  },
+  {
+    system: "nervous",
+    text: "Has urgency (deadlines, unexpected fires) become your normal way of operating?",
+    options: [
+      "Yes, I live in constant urgency",
+      "Often, urgency takes over",
+      "Sometimes, but I find a stable rhythm again afterward",
+      "No, my rhythm stays stable even under pressure",
+    ],
+  },
+  {
+    system: "sales",
+    text: "Do you have a clear process to launch and sell a new offer, rather than reinventing everything each time?",
+    options: [
+      "Every launch starts from scratch, no process",
       "A few recurring pieces, but no real process",
       "A process exists, but I heavily adjust it every time",
       "A clear process I reuse for every launch",
-    ],
-  },
-  {
-    system: "launch",
-    text: "Are your launches planned in advance, with a defined sequence over time?",
-    options: [
-      "No, I launch when it feels right, with no plan",
-      "Vaguely, without a real calendar",
-      "Yes, with a rough sequence",
-      "Yes, precisely planned and sequenced",
-    ],
-  },
-  {
-    system: "launch",
-    text: "Can you roughly estimate the outcome of a launch before you even run it?",
-    options: [
-      "No idea, every launch is a surprise",
-      "A vague, very uncertain range",
-      "A fairly reliable estimate",
-      "A precise estimate, based on my data",
     ],
   },
   {
@@ -204,7 +214,7 @@ const QUESTIONS = [
 const OFFER_URLS = {
   systema: "https://leasola.thrivecart.com/systema/?ref=diagnostic",
   alma: "https://leasola.thrivecart.com/alma/?ref=diagnostic",
-  siesta: "https://leasola.thrivecart.com/la-siesta/?ref=diagnostic",
+  siesta: "https://leasola.thrivecart.com/la-siesta-club-en/?ref=diagnostic",
   lia: "https://tally.so/r/VLBONM?ref=diagnostic",
 };
 
@@ -235,9 +245,9 @@ const RECOMMENDATIONS = {
     name: "La Siesta",
     tag: "The 90-day program",
     whoFor:
-      "For those who already have solid personal branding, content, and acquisition, but whose launches and sales journey stay unpredictable or exhausting.",
+      "For those who already have solid personal branding, content, and acquisition, but whose sales journey and nervous system regulation stay unpredictable or exhausting.",
     result:
-      "You'll come out with your systems in place and connected — content, acquisition, launch, sales — in 90 days, with support.",
+      "You'll come out with your systems in place and connected — content, acquisition, sales, nervous system — in 90 days, with support.",
     nextStep: "Explore the program and book a clarity call.",
     ctaLabel: "Discover La Siesta",
     url: OFFER_URLS.siesta,
@@ -312,7 +322,7 @@ export default function Diagnostic() {
             branding: scores.find((s) => s.key === "branding").score,
             content: scores.find((s) => s.key === "content").score,
             acquisition: scores.find((s) => s.key === "acquisition").score,
-            launch: scores.find((s) => s.key === "launch").score,
+            nervous: scores.find((s) => s.key === "nervous").score,
             sales: scores.find((s) => s.key === "sales").score,
           },
           overall,
@@ -407,7 +417,7 @@ export default function Diagnostic() {
               diagnostic
             </h1>
             <p style={{ fontSize: 16, lineHeight: 1.6, color: COLORS.burgundySoft, marginBottom: 32 }}>
-              Personal branding, content, acquisition, launch, sales. Answer 16 questions to find
+              Personal branding, content, acquisition, sales, nervous system. Answer 17 questions to find
               out which of your systems is holding back your freedom today — and what your next
               step is to get your business running, even when you're not behind it.
             </p>
