@@ -16,11 +16,11 @@ const FONTS = `
 const COLORS = {
   cream: "#F5F1EA",
   creamSoft: "#ECE3D6",
-  burgundy: "#591B34",
-  burgundySoft: "#7C3555",
-  burgundyTint: "#E7CFDA",
-  turquoise: "#1C9C93",
-  turquoiseSoft: "#AEDDD7",
+  burgundy: "#3D2438",
+  burgundySoft: "#6B4A63",
+  burgundyTint: "#E8DCE4",
+  turquoise: "#6FA8B8",
+  turquoiseSoft: "#C3DFE6",
   greige: "#C9BFAF",
 };
 
@@ -242,14 +242,14 @@ const RECOMMENDATIONS = {
     url: OFFER_URLS.alma,
   },
   siesta: {
-    name: "La Siesta",
+    name: "La Siesta Club",
     tag: "The 90-day program",
     whoFor:
       "For those who already have solid personal branding, content, and acquisition, but whose sales journey and nervous system regulation stay unpredictable or exhausting.",
     result:
       "You'll come out with your systems in place and connected — content, acquisition, sales, nervous system — in 90 days, with support.",
     nextStep: "Explore the program and book a clarity call.",
-    ctaLabel: "Discover La Siesta",
+    ctaLabel: "Discover La Siesta Club",
     url: OFFER_URLS.siesta,
   },
   lia: {
@@ -584,7 +584,7 @@ export default function Diagnostic() {
                 type="submit"
                 style={{
                   marginTop: 8,
-                  background: COLORS.turquoise,
+                  background: "#A8342A",
                   color: "#fff",
                   border: "none",
                   borderRadius: 999,
