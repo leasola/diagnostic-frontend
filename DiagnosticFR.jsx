@@ -16,11 +16,11 @@ const FONTS = `
 const COLORS = {
   cream: "#F5F1EA",
   creamSoft: "#ECE3D6",
-  burgundy: "#591B34",
-  burgundySoft: "#7C3555",
-  burgundyTint: "#E7CFDA",
-  turquoise: "#1C9C93",
-  turquoiseSoft: "#AEDDD7",
+  burgundy: "#3D2438",
+  burgundySoft: "#6B4A63",
+  burgundyTint: "#E8DCE4",
+  turquoise: "#6FA8B8",
+  turquoiseSoft: "#C3DFE6",
   greige: "#C9BFAF",
 };
 
@@ -242,14 +242,14 @@ const RECOMMENDATIONS = {
     url: OFFER_URLS.alma,
   },
   siesta: {
-    name: "La Siesta",
+    name: "La Siesta Club",
     tag: "Le programme de 90 jours",
     whoFor:
       "Pour celles qui ont déjà des bases en personal branding, contenu et acquisition, mais dont la vente et le système nerveux restent imprévisibles ou épuisants.",
     result:
       "Tu sors avec tes systèmes posés et connectés entre eux — contenu, acquisition, vente, système nerveux — en 90 jours, accompagnée.",
     nextStep: "Découvre le programme et réserve un appel de clarté.",
-    ctaLabel: "Découvrir La Siesta",
+    ctaLabel: "Découvrir La Siesta Club",
     url: OFFER_URLS.siesta,
   },
   lia: {
@@ -583,7 +583,7 @@ export default function Diagnostic() {
                 type="submit"
                 style={{
                   marginTop: 8,
-                  background: COLORS.turquoise,
+                  background: "#A8342A",
                   color: "#fff",
                   border: "none",
                   borderRadius: 999,
